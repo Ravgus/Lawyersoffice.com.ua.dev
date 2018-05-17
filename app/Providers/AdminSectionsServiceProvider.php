@@ -6,12 +6,16 @@ use SleepingOwl\Admin\Providers\AdminSectionsServiceProvider as ServiceProvider;
 
 class AdminSectionsServiceProvider extends ServiceProvider
 {
-
     /**
      * @var array
      */
     protected $sections = [
-        //\App\User::class => 'App\Http\Sections\Users',
+        \App\Article::class => 'App\Http\Sections\Articles',
+        \App\Faq::class => 'App\Http\Sections\Faqs',
+        \App\Dtp::class => 'App\Http\Sections\Dtp',
+        \App\Offer::class => 'App\Http\Sections\Offers',
+        \App\Partner::class => 'App\Http\Sections\Partners',
+        \App\Worker::class => 'App\Http\Sections\Workers',
     ];
 
     /**
@@ -21,8 +25,6 @@ class AdminSectionsServiceProvider extends ServiceProvider
      */
     public function boot(\SleepingOwl\Admin\Admin $admin)
     {
-    	//
-
         parent::boot($admin);
     }
 }

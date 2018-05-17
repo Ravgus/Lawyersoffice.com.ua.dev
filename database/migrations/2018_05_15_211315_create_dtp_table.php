@@ -17,6 +17,7 @@ class CreateDtpTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('name', 100);
             $table->string('text', 255);
+            $table->string('img', 100)->nullable();
             $table->timestamps();
         });
     }

@@ -154,6 +154,7 @@ return [
         /*By me*/
 
         SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
+        Intervention\Image\ImageServiceProviderLaravel5::class,
 
         /*
          * Application Service Providers...

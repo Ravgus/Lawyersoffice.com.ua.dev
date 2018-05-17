@@ -23,16 +23,46 @@ use SleepingOwl\Admin\Navigation\Page;
 
 return [
     [
-        'title' => 'Dashboard',
+        'title' => 'Главная',
         'icon'  => 'fa fa-dashboard',
         'url'   => route('admin.dashboard'),
     ],
 
-    [
-        'title' => 'Information',
+    /*[
+        'title' => 'Новости',
         'icon'  => 'fa fa-exclamation-circle',
-        'url'   => route('admin.information'),
+        'url'   => route('admin.articles'),
     ],
+
+    [
+        'title' => 'Информация про ДТП',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => route('admin.dtp'),
+    ],
+
+    [
+        'title' => 'Вопросы-Ответы',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => route('admin.faq'),
+    ],
+
+    [
+        'title' => 'Услуги',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => route('admin.offers'),
+    ],
+
+    [
+        'title' => 'С кем сотрудничаем',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => route('admin.partners'),
+    ],
+
+    [
+        'title' => 'Партнеры (сотрудники)',
+        'icon'  => 'fa fa-exclamation-circle',
+        'url'   => route('admin.workers'),
+    ],*/
 
     // Examples
     // [

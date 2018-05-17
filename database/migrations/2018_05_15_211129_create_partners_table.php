@@ -17,8 +17,8 @@ class CreatePartnersTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('name', 100);
             $table->text('text');
-            $table->string('img', 100);
-            $table->string('link', 100);
+            $table->string('img', 100)->nullable();
+            $table->string('link', 100)->nullable();
             $table->timestamps();
         });
     }
