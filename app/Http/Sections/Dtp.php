@@ -51,8 +51,8 @@ class Dtp extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::datatablesAsync()->setColumns([
-            AdminColumn::link('name')->setLabel('Название'),
-            AdminColumn::text('text')->setLabel('Описание'),
+            /*AdminColumn::link('name')->setLabel('Название'),*/
+            AdminColumn::text('text')->setLabel('Описание')->setWidth('60%'),
             AdminColumn::image('img')->setLabel('Изображение'),
         ])->paginate(15);
     }
@@ -65,8 +65,8 @@ class Dtp extends Section implements Initializable
     public function onEdit($id)
     {
         return AdminForm::form()->setElements([
-            AdminFormElement::text('name', 'Название')->addValidationRule('max:100', 'Поле содержит максимум 100 символов')->required('Поле обязательно для заполнения'),
-            AdminFormElement::ckeditor('text', 'Описание')->addValidationRule('max:255', 'Поле содержит максимум 255 символов')->required('Поле обязательно для заполнения'),
+            /*AdminFormElement::text('name', 'Название')->addValidationRule('max:100', 'Поле содержит максимум 100 символов')->required('Поле обязательно для заполнения'),*/
+            AdminFormElement::ckeditor('text', 'Описание')->required('Поле обязательно для заполнения'),
             AdminFormElement::image('img', 'Изображение'),
         ]);
     }

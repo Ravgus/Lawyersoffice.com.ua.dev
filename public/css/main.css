@@ -1,0 +1,732 @@
+*::-webkit-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+/* Remove outline on the forms and links */
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+
+}
+
+body input:required:valid,
+body textarea:required:valid {
+
+}
+
+html.js .loader {
+    background: none repeat scroll 0 0 #ffffff;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+html.js .loader_inner {
+    background-image: url("../images/theme/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+    height: 100%;
+    position: relative;
+    line-height: 1.6;
+    font-family: "AvenirRegular", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    color: #002c3d;
+}
+
+.wrapper {
+    min-height: 100%;
+
+}
+
+.hidden {
+    display: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #e2e6ea;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+/* -------------- MAIN RULES ------------- */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(../images/theme/background.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    color: #663333;
+    position: relative;
+    z-index: 1;
+}
+
+.header .address img, .phone img {
+    float: left;
+    margin-right: 5px;
+}
+
+.navigation {
+    width: 100%;
+    height: 80px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 100;
+    background-color: #002c3d;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.navigation.default {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+}
+
+.navigation.default .waypoint {
+    transform: rotate(180deg);
+
+}
+
+.phone, .address {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.phone {
+    float: right;
+}
+
+.logo {
+    text-align: center;
+    cursor: pointer;
+}
+
+.logo img {
+    margin-top: 15vh;
+}
+
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0; /*убираем левый отступ, равный 40px*/
+    /* text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;*/
+    font-size: 0;
+
+}
+
+ul li {
+    display: inline-block;
+    line-height: 79px; /* почему-то при 80 появляеться полоса скрола */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    /*убираем подчеркивание текста ссылок*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navigation li:hover {
+    height: 80px;
+    width: auto;
+    background-color: #663333;
+}
+
+.navigation li.active {
+    background-color: #663333;
+}
+
+.navigation a {
+
+    color: #fff;
+    height: 100%;
+    padding: 0 20px 0 20px;
+    line-height: 80px;
+}
+
+.waypoint {
+    height: 80px;
+    width: 80px;
+    background-color: #663333;
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navigation .waypoint a {
+    padding: 0;
+}
+
+.navigation .waypoint a img {
+    vertical-align: middle;
+}
+
+.navigation .waypoint:hover {
+    padding: 0;
+    height: 80px;
+    width: 80px;
+    background-color: #663333;
+}
+
+/*----------------*/
+.title {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #002c3d;
+}
+
+.text {
+    font-family: "AvenirRegular", sans-serif;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #002c3d;
+    text-indent: 30px; /* Отступ первой строки */
+    text-align: justify; /* Выравнивание по ширине */
+}
+
+.advantages {
+    text-align: center;
+}
+
+.advantages .title_icon {
+    font-size: 24px;
+    color: #663333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.advantages .text_icon {
+    text-align: left;
+    color: #002c3d;
+    font-family: "AvenirRegular", sans-serif;
+}
+
+/*----------------*/
+.photo {
+    height: 440px;
+    width: auto;
+    background-color: #002c3d;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/*.photo_1 {
+	background-image: url(../images/theme/IMG_2.png);
+}
+.photo_2 {
+	background-image: url(../images/theme/IMG_1.png);
+}*/
+.info {
+    min-height: 400px;
+    width: auto;
+    background-color: #fff;
+    margin-top: -380px;
+    padding: 50px 40px 50px 40px;
+    margin-bottom: 40px;
+}
+
+.info h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: #002c3d;
+    font-family: "AvenirDemi", sans-serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.info h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #002c3d;
+    font-family: "AvenirRegular", sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.text_info {
+    font-size: 16px;
+    font-family: "AvenirRegular", sans-serif;
+    color: #002c3d;
+}
+
+.text_info .subtitle {
+    color: #663333;
+    font-family: "AvenirMedium", sans-serif;
+}
+
+.text_info p:last-child {
+    margin-bottom: 40px;
+}
+
+.team .quote {
+    background-color: #663333;
+    color: #fff;
+    font-family: "AvenirRegular", sans-serif;
+    font-size: 20px;
+    padding: 30px;
+    padding-right: 100px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.team_member_odd .quote {
+    padding-right: 30px;
+    padding-left: 100px;
+    background-color: #002c3d;
+}
+
+.more-link {
+    text-transform: uppercase;
+    color: #663333;
+    font-family: "AvenirMedium", sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    padding: 0 35px;
+    margin-bottom: 40px;
+}
+
+.more-link:before {
+    height: 1px;
+    width: 20px;
+    border-bottom: 1px solid #663333;
+    bottom: 50%;
+    left: 0;
+}
+
+.more-link:after, .more-link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    -webkit-transition: width .25s ease-in-out, height .25s ease-in-out, opacity 0ms .25s;
+    transition: width .25s ease-in-out, height .25s ease-in-out, opacity 0ms .25s;
+}
+
+.more-link:hover:before {
+    width: 30px;
+}
+
+.phone_info {
+    float: right;
+    text-align: right;
+    font-family: "AvenirRegular", sans-serif;
+    font-size: 14px;
+}
+
+.phone_info span {
+    text-transform: uppercase;
+    color: #002c3d;
+    font-family: "AvenirMedium", sans-serif;
+}
+
+.mail_info {
+    display: inline-block;
+    font-family: "AvenirRegular", sans-serif;
+    font-size: 14px;
+}
+
+.mail_info span {
+    text-transform: uppercase;
+    color: #002c3d;
+    font-family: "AvenirMedium", sans-serif;
+}
+
+/*----------------*/
+
+.team_member:last-child .info {
+    margin-bottom: 70px;
+}
+
+.footer {
+    height: 80px;
+    width: 100%;
+    background-color: #002c3d;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footer .copyright {
+    color: #e2e6ea;
+    font-size: 16px;
+    font-family: "AvenirRegular", sans-serif;
+    line-height: 80px;
+}
+
+.social {
+    float: left;
+    margin-left: 50px;
+    vertical-align: bottom;
+    line-height: 80px;
+}
+
+.social a {
+    margin-left: 10px;
+}
+
+.logo_footer {
+    margin-right: 50px;
+    margin-top: 10px;
+    float: right;
+    opacity: .5;
+}
+
+/*----------------*/
+.text_menu {
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 80px;
+    display: inline-block;
+    padding-left: 80px;
+}
+
+.icon_menu {
+    width: 150px;
+    height: 80px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+    background-color: #663333;
+}
+
+.icon_menu span {
+    position: absolute;
+    height: 2.5px;
+    width: 36px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: 22px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.icon_menu span:nth-child(1) {
+    top: 25px;
+}
+
+.icon_menu span:nth-child(2), .icon_menu span:nth-child(3) {
+    top: 38px;
+}
+
+.icon_menu span:nth-child(4) {
+    top: 51px;
+}
+
+/* -------------- DTP Help ------------- */
+.wrapper .header.content {
+    height: 300px;
+    position: relative;
+}
+
+.header.content .logo img {
+    margin-top: -40px;
+}
+
+.header.content .navigation {
+    margin-top: 0;
+}
+
+.advantages.dtp .text_icon {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+/* -------------- Services ------------- */
+.advantages.services .text_icon {
+    margin-bottom: 70px;
+}
+
+.advantages.services .dsp_sm {
+    display: none;
+}
+
+/* -------------- Contacts ------------- */
+.contacts .address {
+    text-align: center;
+}
+
+.google_map {
+    height: 300px;
+    background-color: #663333;
+}
+
+.separator {
+    height: 1px;
+    background: rgba(102, 51, 51, .1);
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.phone_contacts, .address_contacts, .mail_contacts {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.about.contacts img {
+    position: absolute;
+}
+
+.about.contacts span {
+    margin-left: 30px;
+}
+
+/* -------------- News ------------- */
+.preview {
+    height: 260px;
+    width: auto;
+    /*background-image: url(../images/theme/img_preview_1.png);*/
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.headline {
+    font-size: 26px;
+    font-family: "AvenirRegular", sans-serif;
+    margin-bottom: 20px;
+}
+
+.date {
+    color: #663333;
+    font-size: 14px;
+    font-family: "AvenirMedium", sans-serif;
+    position: relative;
+}
+
+.date img {
+    float: left;
+    margin-right: 10px;
+}
+
+@supports (-webkit-line-clamp: 4) {
+    .description {
+        /* может не работать в старых браузерах пожтому добавим поддержку */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.description {
+    max-height: 100px;
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+
+}
+
+.news .separator {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.news .more-link {
+    margin: 0;
+}
+
+.pagination {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.pagination a {
+    font-size: 16px;
+    font-family: "AvenirRegular", sans-serif;
+    color: rgba(3, 33, 61, .5);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.pagination li {
+    line-height: 100%;
+}
+
+.pagination a:hover {
+    color: rgba(3, 33, 61, 1);
+}
+
+.pagination a.active {
+    text-decoration: underline;
+    color: #663333;
+}
+
+/* -------------- News Single ------------- */
+.news.single .preview {
+    float: right;
+    width: 450px;
+    height: 300px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.news.single .article_item {
+    margin-top: 40px;
+}
+
+.news.single .separator {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.nesw.single .description {
+    overflow: auto;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+/* -------------- Faq ------------- */
+
+.title_quest span {
+    font-size: 18px;
+    color: #663333;
+    margin-left: 20px;
+}
+
+.title_quest .arrow {
+    float: right;
+    margin-top: 24px;
+    margin-right: 20px;
+    opacity: .1;
+    transform: rotate(180deg);
+}
+
+.title_quest {
+    border-bottom: 1px solid rgba(102, 51, 51, .1);
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.title_quest:hover {
+    background-color: #fff;
+}
+
+.title_quest:hover .arrow {
+    opacity: 1;
+}
+
+.text_quest {
+    display: none;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.quest.open .title_quest {
+    background-color: #fff;
+}
+
+.quest.open .title_quest .arrow {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.quest.open .text_quest {
+    display: block;
+}
+
+.about.faq {
+    margin-bottom: 70px;
+}
+
+/* -------------- partners ------------- */
+/*.photo_partner_1 {
+	background-image: url(../images/theme/img_preview_2.png);
+}*/
+
+.owl-carousel .owl-nav button.owl-prev {
+    width: 70px;
+    height: 70px;
+    background-color: #002c3d;
+    background-image: url(../images/theme/svg/arrow_left.svg);
+    -webkit-background-size: 22px auto;
+    background-size: 22px auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    width: 70px;
+    height: 70px;
+    background-color: #002c3d;
+    background-image: url(../images/theme/svg/arrow_right.svg);
+    -webkit-background-size: 22px auto;
+    background-size: 22px auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+}
+
+.owl-carousel .more-link {
+    text-transform: none;
+}
+	

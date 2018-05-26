@@ -68,8 +68,9 @@ class Workers extends Section implements Initializable
     public function onEdit($id)
     {
         return AdminForm::form()->setElements([
-            AdminFormElement::text('name', 'Название')->required('Поле обязательно для заполнения'),
+            AdminFormElement::text('name', 'Название')->addValidationRule('max:100', 'Поле содержит максимум 100 символов')->required('Поле обязательно для заполнения'),
             AdminFormElement::ckeditor('text', 'Описание')->required('Поле обязательно для заполнения'),
+            AdminFormElement::text('sphere', 'Сфера научных интересов')->addValidationRule('max:255', 'Поле содержит максимум 255 символов'),
             AdminFormElement::text('email', 'E-mail')
                 ->addValidationRule('email', 'Поле должно содержать корректный E-mail адрес')->required('Поле обязательно для заполнения'),
             AdminFormElement::text('phone', 'Номер телефона')->addValidationRule('between:5,20', 'Поле должно содержать от 5 до 20 символов')->required('Поле обязательно для заполнения'),

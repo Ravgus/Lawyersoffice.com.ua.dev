@@ -9,6 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return AdminSection::view(view('dashboard'), '');
+        return AdminSection::view(view('dashboard', ['last' => \Auth::user()->last_entry]), '');
     }
 }

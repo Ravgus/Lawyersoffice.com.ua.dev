@@ -54,7 +54,7 @@ class Articles extends Section implements Initializable
             AdminColumn::text('id')->setLabel('ID'),
             AdminColumn::link('name')->setLabel('Название')->setWidth('15%'),
             AdminColumn::text('description')->setLabel('Краткое описание')->setHtmlAttribute('class', 'text-muted')->setWidth('35%'),
-            AdminColumn::image('sm_img')->setLabel('Изображение'),
+            AdminColumn::image('lg_img')->setLabel('Изображение'),
             AdminColumn::text('updated_at')->setLabel('Дата последнего обновления'),
         ]);
 
@@ -72,7 +72,7 @@ class Articles extends Section implements Initializable
     {
         return AdminForm::form()->setElements([
             AdminFormElement::text('name', 'Название')->addValidationRule('max:150', 'Поле содержит максимум 150 символов')->required('Поле обязательно для заполнения'),
-            AdminFormElement::textarea('description', 'Краткое описание')->addValidationRule('max:150', 'Поле содержит максимум 255 символов')->required('Поле обязательно для заполнения'),
+            AdminFormElement::textarea('description', 'Краткое описание')->required('Поле обязательно для заполнения'),
             AdminFormElement::ckeditor('text', 'Текст')->required('Поле обязательно для заполнения'),
             AdminFormElement::image('lg_img', 'Изображение'),
         ]);

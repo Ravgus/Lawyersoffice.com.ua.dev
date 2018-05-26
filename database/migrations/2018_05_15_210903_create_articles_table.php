@@ -18,8 +18,8 @@ class CreateArticlesTable extends Migration
             $table->string('name', 150);
             $table->string('alias', 170);
             $table->text('text');
-            $table->string('description', 255);
-            $table->string('sm_img', 100)->nullable();
+            $table->text('description');
+            /*$table->string('sm_img', 100)->nullable();*/
             $table->string('lg_img', 100)->nullable();
             $table->timestamps();
 

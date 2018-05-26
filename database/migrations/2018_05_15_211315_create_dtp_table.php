@@ -15,8 +15,8 @@ class CreateDtpTable extends Migration
     {
         Schema::create('dtp', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->string('name', 100);
-            $table->string('text', 255);
+            $table->string('name', 100)->nullable();
+            $table->text('text');
             $table->string('img', 100)->nullable();
             $table->timestamps();
         });

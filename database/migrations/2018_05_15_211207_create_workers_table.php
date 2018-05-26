@@ -16,7 +16,8 @@ class CreateWorkersTable extends Migration
         Schema::create('workers', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name', 100);
-            $table->string('text', 255);
+            $table->text('text');
+            $table->string('sphere', 255);
             $table->string('img', 100);
             $table->string('email', 100);
             $table->string('phone', 50);

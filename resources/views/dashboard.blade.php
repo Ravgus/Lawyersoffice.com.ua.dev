@@ -8,6 +8,8 @@
         <div class="row" style="text-align: center;">
             <div class="col-xs-12">
                 <h1>Добро пожаловать!</h1>
+                <br/>
+                <h4>Последний вход: {{ $last }}</h4>
             </div>
         </div>
     </div>

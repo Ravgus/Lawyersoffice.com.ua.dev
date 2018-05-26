@@ -11,9 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-})->name('main');
+})->name('main');*/
+
+Route::get('/', ['uses' => 'PagesController@main', 'as' => 'main']);
+Route::get('/offers', ['uses' => 'PagesController@offers', 'as' => 'offers']);
+Route::get('/dtps', ['uses' => 'PagesController@dtps', 'as' => 'dtps']);
+Route::get('/faqs', ['uses' => 'PagesController@faqs', 'as' => 'faqs']);
+Route::get('/partners', ['uses' => 'PagesController@partners', 'as' => 'partners']);
+Route::get('/contacts', ['uses' => 'PagesController@contacts', 'as' => 'contacts']);
+Route::get('/news', ['uses' => 'PagesController@news', 'as' => 'news']);
+Route::get('/news/{alias}', ['uses' => 'PagesController@article', 'as' => 'article']);
 
 Auth::routes();
 

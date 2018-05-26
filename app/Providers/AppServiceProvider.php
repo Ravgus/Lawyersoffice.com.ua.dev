@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use View;
+use App\Navigation;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Передача полей навигации в каждый шаблон
+        View::share('navigation', Navigation::all());
     }
 
     /**

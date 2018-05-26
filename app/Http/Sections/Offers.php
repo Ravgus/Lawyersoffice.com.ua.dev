@@ -66,7 +66,7 @@ class Offers extends Section implements Initializable
     {
         return AdminForm::form()->setElements([
             AdminFormElement::text('name', 'Название')->addValidationRule('max:100', 'Поле содержит максимум 100 символов')->required('Поле обязательно для заполнения'),
-            AdminFormElement::ckeditor('text', 'Описание')->addValidationRule('max:255', 'Поле содержит максимум 255 символов')->required('Поле обязательно для заполнения'),
+            AdminFormElement::ckeditor('text', 'Описание')->required('Поле обязательно для заполнения'),
             AdminFormElement::image('img', 'Изображение'),
         ]);
     }
