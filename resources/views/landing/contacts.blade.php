@@ -1,5 +1,11 @@
 @extends('layouts.main')
 
+@section('meta')
+    <meta name="description" content="На данной странице указаны контакты для обратной связи с фирмой">
+    <meta name="author" content="Bang-studio.com">
+    <meta name="keywords" content="контакты, почта, телефон, карта, адвокаты, херсон, грицак, терно, бубенщиков">
+@endsection
+
 @section('title', $title)
 
 @section('header', 'content')

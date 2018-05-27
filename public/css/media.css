@@ -149,7 +149,8 @@
     }
 
     .photo {
-        height: 340px;
+        /*height: 340px;*/
+        height: 540px;
     }
 
     .info {

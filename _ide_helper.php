@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.22 on 2018-05-15 21:53:19.
+ * Generated for Laravel 5.6.22 on 2018-05-26 19:36:25.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12452,18 +12452,79 @@ namespace Illuminate\Support\Facades {
  
 }
 
+namespace Intervention\Image\Facades {
+
+    class Image
+    {
+
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @static
+         */
+        public static function configure($config = array())
+        {
+            return \Intervention\Image\ImageManager::configure($config);
+        }
+
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image
+         * @static
+         */
+        public static function make($data)
+        {
+            return \Intervention\Image\ImageManager::make($data);
+        }
+
+        /**
+         * Creates an empty image canvas
+         *
+         * @param integer $width
+         * @param integer $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image
+         * @static
+         */
+        public static function canvas($width, $height, $background = null)
+        {
+            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
+        }
+
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param integer $lifetime
+         * @param boolean $returnObj
+         * @return \Image
+         * @static
+         */
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
+        }
+
+    }
+
+}
+
 namespace Collective\Html {
 
     class FormFacade
     {
-
+        
         /**
          * Open up a new HTML form.
          *
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function open($options = array())
         {
             return \Collective\Html\FormBuilder::open($options);
@@ -12476,7 +12537,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function model($model, $options = array())
         {
             return \Collective\Html\FormBuilder::model($model, $options);
@@ -12488,7 +12549,7 @@ namespace Collective\Html {
          * @param mixed $model
          * @return void
          * @static
-         */
+         */ 
         public static function setModel($model)
         {
             \Collective\Html\FormBuilder::setModel($model);
@@ -12499,7 +12560,7 @@ namespace Collective\Html {
          *
          * @return mixed $model
          * @static
-         */
+         */ 
         public static function getModel()
         {
             return \Collective\Html\FormBuilder::getModel();
@@ -12510,7 +12571,7 @@ namespace Collective\Html {
          *
          * @return string
          * @static
-         */
+         */ 
         public static function close()
         {
             return \Collective\Html\FormBuilder::close();
@@ -12521,7 +12582,7 @@ namespace Collective\Html {
          *
          * @return string
          * @static
-         */
+         */ 
         public static function token()
         {
             return \Collective\Html\FormBuilder::token();
@@ -12536,7 +12597,7 @@ namespace Collective\Html {
          * @param bool $escape_html
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function label($name, $value = null, $options = array(), $escape_html = true)
         {
             return \Collective\Html\FormBuilder::label($name, $value, $options, $escape_html);
@@ -12551,7 +12612,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function input($type, $name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::input($type, $name, $value, $options);
@@ -12565,7 +12626,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function text($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::text($name, $value, $options);
@@ -12578,7 +12639,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function password($name, $options = array())
         {
             return \Collective\Html\FormBuilder::password($name, $options);
@@ -12592,7 +12653,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function hidden($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::hidden($name, $value, $options);
@@ -12606,7 +12667,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function search($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::search($name, $value, $options);
@@ -12620,7 +12681,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function email($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::email($name, $value, $options);
@@ -12634,7 +12695,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function tel($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::tel($name, $value, $options);
@@ -12648,7 +12709,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function number($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::number($name, $value, $options);
@@ -12662,7 +12723,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function date($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::date($name, $value, $options);
@@ -12676,7 +12737,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function datetime($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::datetime($name, $value, $options);
@@ -12690,7 +12751,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function datetimeLocal($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::datetimeLocal($name, $value, $options);
@@ -12704,7 +12765,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function time($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::time($name, $value, $options);
@@ -12718,7 +12779,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function url($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::url($name, $value, $options);
@@ -12731,7 +12792,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function file($name, $options = array())
         {
             return \Collective\Html\FormBuilder::file($name, $options);
@@ -12745,7 +12806,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function textarea($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::textarea($name, $value, $options);
@@ -12762,7 +12823,7 @@ namespace Collective\Html {
          * @param array $optgroupsAttributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function select($name, $list = array(), $selected = null, $selectAttributes = array(), $optionsAttributes = array(), $optgroupsAttributes = array())
         {
             return \Collective\Html\FormBuilder::select($name, $list, $selected, $selectAttributes, $optionsAttributes, $optgroupsAttributes);
@@ -12778,7 +12839,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function selectRange($name, $begin, $end, $selected = null, $options = array())
         {
             return \Collective\Html\FormBuilder::selectRange($name, $begin, $end, $selected, $options);
@@ -12794,7 +12855,7 @@ namespace Collective\Html {
          * @param array $options
          * @return mixed
          * @static
-         */
+         */ 
         public static function selectYear()
         {
             return \Collective\Html\FormBuilder::selectYear();
@@ -12809,7 +12870,7 @@ namespace Collective\Html {
          * @param string $format
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function selectMonth($name, $selected = null, $options = array(), $format = '%B')
         {
             return \Collective\Html\FormBuilder::selectMonth($name, $selected, $options, $format);
@@ -12825,7 +12886,7 @@ namespace Collective\Html {
          * @param array $optgroupAttributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function getSelectOption($display, $value, $selected, $attributes = array(), $optgroupAttributes = array())
         {
             return \Collective\Html\FormBuilder::getSelectOption($display, $value, $selected, $attributes, $optgroupAttributes);
@@ -12840,7 +12901,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function checkbox($name, $value = 1, $checked = null, $options = array())
         {
             return \Collective\Html\FormBuilder::checkbox($name, $value, $checked, $options);
@@ -12855,7 +12916,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function radio($name, $value = null, $checked = null, $options = array())
         {
             return \Collective\Html\FormBuilder::radio($name, $value, $checked, $options);
@@ -12868,7 +12929,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function reset($value, $attributes = array())
         {
             return \Collective\Html\FormBuilder::reset($value, $attributes);
@@ -12882,7 +12943,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function image($url, $name = null, $attributes = array())
         {
             return \Collective\Html\FormBuilder::image($url, $name, $attributes);
@@ -12896,7 +12957,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function color($name, $value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::color($name, $value, $options);
@@ -12909,7 +12970,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function submit($value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::submit($value, $options);
@@ -12922,7 +12983,7 @@ namespace Collective\Html {
          * @param array $options
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function button($value = null, $options = array())
         {
             return \Collective\Html\FormBuilder::button($value, $options);
@@ -12935,7 +12996,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return string
          * @static
-         */
+         */ 
         public static function getIdAttribute($name, $attributes)
         {
             return \Collective\Html\FormBuilder::getIdAttribute($name, $attributes);
@@ -12948,7 +13009,7 @@ namespace Collective\Html {
          * @param string $value
          * @return mixed
          * @static
-         */
+         */ 
         public static function getValueAttribute($name, $value = null)
         {
             return \Collective\Html\FormBuilder::getValueAttribute($name, $value);
@@ -12960,7 +13021,7 @@ namespace Collective\Html {
          * @param string $name
          * @return mixed
          * @static
-         */
+         */ 
         public static function old($name)
         {
             return \Collective\Html\FormBuilder::old($name);
@@ -12971,7 +13032,7 @@ namespace Collective\Html {
          *
          * @return bool
          * @static
-         */
+         */ 
         public static function oldInputIsEmpty()
         {
             return \Collective\Html\FormBuilder::oldInputIsEmpty();
@@ -12982,7 +13043,7 @@ namespace Collective\Html {
          *
          * @return \Illuminate\Contracts\Session\Session $session
          * @static
-         */
+         */ 
         public static function getSessionStore()
         {
             return \Collective\Html\FormBuilder::getSessionStore();
@@ -12994,7 +13055,7 @@ namespace Collective\Html {
          * @param \Illuminate\Contracts\Session\Session $session
          * @return $this
          * @static
-         */
+         */ 
         public static function setSessionStore($session)
         {
             return \Collective\Html\FormBuilder::setSessionStore($session);
@@ -13007,7 +13068,7 @@ namespace Collective\Html {
          * @param object|callable $macro
          * @return void
          * @static
-         */
+         */ 
         public static function macro($name, $macro)
         {
             \Collective\Html\FormBuilder::macro($name, $macro);
@@ -13017,10 +13078,10 @@ namespace Collective\Html {
          * Mix another object into the class.
          *
          * @param object $mixin
-         * @return void
+         * @return void 
          * @throws \ReflectionException
          * @static
-         */
+         */ 
         public static function mixin($mixin)
         {
             \Collective\Html\FormBuilder::mixin($mixin);
@@ -13032,7 +13093,7 @@ namespace Collective\Html {
          * @param string $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasMacro($name)
         {
             return \Collective\Html\FormBuilder::hasMacro($name);
@@ -13043,10 +13104,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
+         * @return mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function macroCall($method, $parameters)
         {
             return \Collective\Html\FormBuilder::macroCall($method, $parameters);
@@ -13060,7 +13121,7 @@ namespace Collective\Html {
          * @param array $signature
          * @return void
          * @static
-         */
+         */ 
         public static function component($name, $view, $signature)
         {
             \Collective\Html\FormBuilder::component($name, $view, $signature);
@@ -13072,7 +13133,7 @@ namespace Collective\Html {
          * @param $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasComponent($name)
         {
             return \Collective\Html\FormBuilder::hasComponent($name);
@@ -13083,10 +13144,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed
+         * @return \Illuminate\Contracts\View\View|mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function componentCall($method, $parameters)
         {
             return \Collective\Html\FormBuilder::componentCall($method, $parameters);
@@ -13096,14 +13157,14 @@ namespace Collective\Html {
 
     class HtmlFacade
     {
-
+        
         /**
          * Convert an HTML string to entities.
          *
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function entities($value)
         {
             return \Collective\Html\HtmlBuilder::entities($value);
@@ -13115,7 +13176,7 @@ namespace Collective\Html {
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function decode($value)
         {
             return \Collective\Html\HtmlBuilder::decode($value);
@@ -13129,7 +13190,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function script($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::script($url, $attributes, $secure);
@@ -13143,7 +13204,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function style($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::style($url, $attributes, $secure);
@@ -13158,7 +13219,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function image($url, $alt = null, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::image($url, $alt, $attributes, $secure);
@@ -13172,7 +13233,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function favicon($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::favicon($url, $attributes, $secure);
@@ -13188,7 +13249,7 @@ namespace Collective\Html {
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function link($url, $title = null, $attributes = array(), $secure = null, $escape = true)
         {
             return \Collective\Html\HtmlBuilder::link($url, $title, $attributes, $secure, $escape);
@@ -13202,7 +13263,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function secureLink($url, $title = null, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::secureLink($url, $title, $attributes);
@@ -13217,7 +13278,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkAsset($url, $title = null, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::linkAsset($url, $title, $attributes, $secure);
@@ -13231,7 +13292,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkSecureAsset($url, $title = null, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkSecureAsset($url, $title, $attributes);
@@ -13246,7 +13307,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
@@ -13261,7 +13322,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkAction($action, $title = null, $parameters = array(), $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkAction($action, $title, $parameters, $attributes);
@@ -13276,7 +13337,7 @@ namespace Collective\Html {
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function mailto($email, $title = null, $attributes = array(), $escape = true)
         {
             return \Collective\Html\HtmlBuilder::mailto($email, $title, $attributes, $escape);
@@ -13288,7 +13349,7 @@ namespace Collective\Html {
          * @param string $email
          * @return string
          * @static
-         */
+         */ 
         public static function email($email)
         {
             return \Collective\Html\HtmlBuilder::email($email);
@@ -13300,7 +13361,7 @@ namespace Collective\Html {
          * @param int $num
          * @return string
          * @static
-         */
+         */ 
         public static function nbsp($num = 1)
         {
             return \Collective\Html\HtmlBuilder::nbsp($num);
@@ -13313,7 +13374,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
          * @static
-         */
+         */ 
         public static function ol($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::ol($list, $attributes);
@@ -13326,7 +13387,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
          * @static
-         */
+         */ 
         public static function ul($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::ul($list, $attributes);
@@ -13339,7 +13400,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function dl($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::dl($list, $attributes);
@@ -13351,7 +13412,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return string
          * @static
-         */
+         */ 
         public static function attributes($attributes)
         {
             return \Collective\Html\HtmlBuilder::attributes($attributes);
@@ -13363,7 +13424,7 @@ namespace Collective\Html {
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function obfuscate($value)
         {
             return \Collective\Html\HtmlBuilder::obfuscate($value);
@@ -13377,7 +13438,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function meta($name, $content, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::meta($name, $content, $attributes);
@@ -13391,7 +13452,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function tag($tag, $content, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::tag($tag, $content, $attributes);
@@ -13404,7 +13465,7 @@ namespace Collective\Html {
          * @param object|callable $macro
          * @return void
          * @static
-         */
+         */ 
         public static function macro($name, $macro)
         {
             \Collective\Html\HtmlBuilder::macro($name, $macro);
@@ -13414,10 +13475,10 @@ namespace Collective\Html {
          * Mix another object into the class.
          *
          * @param object $mixin
-         * @return void
+         * @return void 
          * @throws \ReflectionException
          * @static
-         */
+         */ 
         public static function mixin($mixin)
         {
             \Collective\Html\HtmlBuilder::mixin($mixin);
@@ -13429,7 +13490,7 @@ namespace Collective\Html {
          * @param string $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasMacro($name)
         {
             return \Collective\Html\HtmlBuilder::hasMacro($name);
@@ -13440,10 +13501,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
+         * @return mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function macroCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::macroCall($method, $parameters);
@@ -13457,7 +13518,7 @@ namespace Collective\Html {
          * @param array $signature
          * @return void
          * @static
-         */
+         */ 
         public static function component($name, $view, $signature)
         {
             \Collective\Html\HtmlBuilder::component($name, $view, $signature);
@@ -13469,7 +13530,7 @@ namespace Collective\Html {
          * @param $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasComponent($name)
         {
             return \Collective\Html\HtmlBuilder::hasComponent($name);
@@ -13480,10 +13541,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed
+         * @return \Illuminate\Contracts\View\View|mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function componentCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
@@ -13493,14 +13554,14 @@ namespace Collective\Html {
 
     class HtmlFacade
     {
-
+        
         /**
          * Convert an HTML string to entities.
          *
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function entities($value)
         {
             return \Collective\Html\HtmlBuilder::entities($value);
@@ -13512,7 +13573,7 @@ namespace Collective\Html {
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function decode($value)
         {
             return \Collective\Html\HtmlBuilder::decode($value);
@@ -13526,7 +13587,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function script($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::script($url, $attributes, $secure);
@@ -13540,7 +13601,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function style($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::style($url, $attributes, $secure);
@@ -13555,7 +13616,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function image($url, $alt = null, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::image($url, $alt, $attributes, $secure);
@@ -13569,7 +13630,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function favicon($url, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::favicon($url, $attributes, $secure);
@@ -13585,7 +13646,7 @@ namespace Collective\Html {
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function link($url, $title = null, $attributes = array(), $secure = null, $escape = true)
         {
             return \Collective\Html\HtmlBuilder::link($url, $title, $attributes, $secure, $escape);
@@ -13599,7 +13660,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function secureLink($url, $title = null, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::secureLink($url, $title, $attributes);
@@ -13614,7 +13675,7 @@ namespace Collective\Html {
          * @param bool $secure
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkAsset($url, $title = null, $attributes = array(), $secure = null)
         {
             return \Collective\Html\HtmlBuilder::linkAsset($url, $title, $attributes, $secure);
@@ -13628,7 +13689,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkSecureAsset($url, $title = null, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkSecureAsset($url, $title, $attributes);
@@ -13643,7 +13704,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
@@ -13658,7 +13719,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function linkAction($action, $title = null, $parameters = array(), $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::linkAction($action, $title, $parameters, $attributes);
@@ -13673,7 +13734,7 @@ namespace Collective\Html {
          * @param bool $escape
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function mailto($email, $title = null, $attributes = array(), $escape = true)
         {
             return \Collective\Html\HtmlBuilder::mailto($email, $title, $attributes, $escape);
@@ -13685,7 +13746,7 @@ namespace Collective\Html {
          * @param string $email
          * @return string
          * @static
-         */
+         */ 
         public static function email($email)
         {
             return \Collective\Html\HtmlBuilder::email($email);
@@ -13697,7 +13758,7 @@ namespace Collective\Html {
          * @param int $num
          * @return string
          * @static
-         */
+         */ 
         public static function nbsp($num = 1)
         {
             return \Collective\Html\HtmlBuilder::nbsp($num);
@@ -13710,7 +13771,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
          * @static
-         */
+         */ 
         public static function ol($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::ol($list, $attributes);
@@ -13723,7 +13784,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString|string
          * @static
-         */
+         */ 
         public static function ul($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::ul($list, $attributes);
@@ -13736,7 +13797,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function dl($list, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::dl($list, $attributes);
@@ -13748,7 +13809,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return string
          * @static
-         */
+         */ 
         public static function attributes($attributes)
         {
             return \Collective\Html\HtmlBuilder::attributes($attributes);
@@ -13760,7 +13821,7 @@ namespace Collective\Html {
          * @param string $value
          * @return string
          * @static
-         */
+         */ 
         public static function obfuscate($value)
         {
             return \Collective\Html\HtmlBuilder::obfuscate($value);
@@ -13774,7 +13835,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function meta($name, $content, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::meta($name, $content, $attributes);
@@ -13788,7 +13849,7 @@ namespace Collective\Html {
          * @param array $attributes
          * @return \Illuminate\Support\HtmlString
          * @static
-         */
+         */ 
         public static function tag($tag, $content, $attributes = array())
         {
             return \Collective\Html\HtmlBuilder::tag($tag, $content, $attributes);
@@ -13801,7 +13862,7 @@ namespace Collective\Html {
          * @param object|callable $macro
          * @return void
          * @static
-         */
+         */ 
         public static function macro($name, $macro)
         {
             \Collective\Html\HtmlBuilder::macro($name, $macro);
@@ -13811,10 +13872,10 @@ namespace Collective\Html {
          * Mix another object into the class.
          *
          * @param object $mixin
-         * @return void
+         * @return void 
          * @throws \ReflectionException
          * @static
-         */
+         */ 
         public static function mixin($mixin)
         {
             \Collective\Html\HtmlBuilder::mixin($mixin);
@@ -13826,7 +13887,7 @@ namespace Collective\Html {
          * @param string $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasMacro($name)
         {
             return \Collective\Html\HtmlBuilder::hasMacro($name);
@@ -13837,10 +13898,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
+         * @return mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function macroCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::macroCall($method, $parameters);
@@ -13854,7 +13915,7 @@ namespace Collective\Html {
          * @param array $signature
          * @return void
          * @static
-         */
+         */ 
         public static function component($name, $view, $signature)
         {
             \Collective\Html\HtmlBuilder::component($name, $view, $signature);
@@ -13866,7 +13927,7 @@ namespace Collective\Html {
          * @param $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasComponent($name)
         {
             return \Collective\Html\HtmlBuilder::hasComponent($name);
@@ -13877,10 +13938,10 @@ namespace Collective\Html {
          *
          * @param string $method
          * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed
+         * @return \Illuminate\Contracts\View\View|mixed 
          * @throws \BadMethodCallException
          * @static
-         */
+         */ 
         public static function componentCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
@@ -13894,26 +13955,26 @@ namespace KodiCMS\Assets\Facades {
 
     class PackageManager
     {
-
+        
         /**
-         *
+         * 
          *
          * @param string|\KodiCMS\Assets\PackageInterface $package
          * @return \KodiCMS\Assets\Package
          * @static
-         */
+         */ 
         public static function add($package)
         {
             return \KodiCMS\Assets\PackageManager::add($package);
         }
 
         /**
-         *
+         * 
          *
          * @param string $name
          * @return \KodiCMS\Assets\PackageInterface|null
          * @static
-         */
+         */ 
         public static function load($name)
         {
             return \KodiCMS\Assets\PackageManager::load($name);
@@ -13925,7 +13986,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function make($items = array())
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -13938,7 +13999,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function wrap($value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -13951,7 +14012,7 @@ namespace KodiCMS\Assets\Facades {
          * @param array|static $value
          * @return array
          * @static
-         */
+         */ 
         public static function unwrap($value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -13965,7 +14026,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function times($number, $callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -13977,7 +14038,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return array
          * @static
-         */
+         */ 
         public static function all()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -13990,7 +14051,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string|null $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function avg($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14003,7 +14064,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string|null $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function average($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14016,7 +14077,7 @@ namespace KodiCMS\Assets\Facades {
          * @param null $key
          * @return mixed
          * @static
-         */
+         */ 
         public static function median($key = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14029,7 +14090,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $key
          * @return array|null
          * @static
-         */
+         */ 
         public static function mode($key = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14041,7 +14102,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return static
          * @static
-         */
+         */ 
         public static function collapse()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14056,7 +14117,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return bool
          * @static
-         */
+         */ 
         public static function contains($key, $operator = null, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14070,7 +14131,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return bool
          * @static
-         */
+         */ 
         public static function containsStrict($key, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14083,7 +14144,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $lists
          * @return static
          * @static
-         */
+         */ 
         public static function crossJoin($lists = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14095,7 +14156,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return void
          * @static
-         */
+         */ 
         public static function dd($args = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14107,7 +14168,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return $this
          * @static
-         */
+         */ 
         public static function dump()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14120,7 +14181,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function diff($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14134,7 +14195,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function diffUsing($items, $callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14147,7 +14208,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function diffAssoc($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14161,7 +14222,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function diffAssocUsing($items, $callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14174,7 +14235,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function diffKeys($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14188,7 +14249,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function diffKeysUsing($items, $callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14201,7 +14262,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return $this
          * @static
-         */
+         */ 
         public static function each($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14214,7 +14275,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function eachSpread($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14229,7 +14290,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return bool
          * @static
-         */
+         */ 
         public static function every($key, $operator = null, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14242,7 +14303,7 @@ namespace KodiCMS\Assets\Facades {
          * @param \Illuminate\Support\Collection|mixed $keys
          * @return static
          * @static
-         */
+         */ 
         public static function except($keys)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14255,7 +14316,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|null $callback
          * @return static
          * @static
-         */
+         */ 
         public static function filter($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14270,7 +14331,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function when($value, $callback, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14285,7 +14346,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function unless($value, $callback, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14300,7 +14361,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function where($key, $operator, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14314,7 +14375,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function whereStrict($key, $value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14329,7 +14390,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $strict
          * @return static
          * @static
-         */
+         */ 
         public static function whereIn($key, $values, $strict = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14343,7 +14404,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $values
          * @return static
          * @static
-         */
+         */ 
         public static function whereInStrict($key, $values)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14358,7 +14419,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $strict
          * @return static
          * @static
-         */
+         */ 
         public static function whereNotIn($key, $values, $strict = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14372,7 +14433,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $values
          * @return static
          * @static
-         */
+         */ 
         public static function whereNotInStrict($key, $values)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14385,7 +14446,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $type
          * @return static
          * @static
-         */
+         */ 
         public static function whereInstanceOf($type)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14399,7 +14460,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function first($callback = null, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14414,7 +14475,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function firstWhere($key, $operator, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14427,7 +14488,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $depth
          * @return static
          * @static
-         */
+         */ 
         public static function flatten($depth = 'INF')
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14439,7 +14500,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return static
          * @static
-         */
+         */ 
         public static function flip()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14452,7 +14513,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string|array $keys
          * @return $this
          * @static
-         */
+         */ 
         public static function forget($keys)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14466,7 +14527,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function get($key, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14480,7 +14541,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $preserveKeys
          * @return static
          * @static
-         */
+         */ 
         public static function groupBy($groupBy, $preserveKeys = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14493,7 +14554,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string $keyBy
          * @return static
          * @static
-         */
+         */ 
         public static function keyBy($keyBy)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14506,7 +14567,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $key
          * @return bool
          * @static
-         */
+         */ 
         public static function has($key)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14520,7 +14581,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $glue
          * @return string
          * @static
-         */
+         */ 
         public static function implode($value, $glue = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14533,7 +14594,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function intersect($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14546,7 +14607,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function intersectByKeys($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14558,7 +14619,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return bool
          * @static
-         */
+         */ 
         public static function isEmpty()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14570,7 +14631,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return bool
          * @static
-         */
+         */ 
         public static function isNotEmpty()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14582,7 +14643,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return static
          * @static
-         */
+         */ 
         public static function keys()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14596,7 +14657,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function last($callback = null, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14610,7 +14671,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string|null $key
          * @return static
          * @static
-         */
+         */ 
         public static function pluck($value, $key = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14623,7 +14684,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function map($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14636,7 +14697,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function mapSpread($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14645,13 +14706,13 @@ namespace KodiCMS\Assets\Facades {
 
         /**
          * Run a dictionary map over the items.
-         *
+         * 
          * The callback should return an associative array with a single key/value pair.
          *
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function mapToDictionary($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14660,13 +14721,13 @@ namespace KodiCMS\Assets\Facades {
 
         /**
          * Run a grouping map over the items.
-         *
+         * 
          * The callback should return an associative array with a single key/value pair.
          *
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function mapToGroups($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14675,13 +14736,13 @@ namespace KodiCMS\Assets\Facades {
 
         /**
          * Run an associative map over each of the items.
-         *
+         * 
          * The callback should return an associative array with a single key/value pair.
          *
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function mapWithKeys($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14694,7 +14755,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return static
          * @static
-         */
+         */ 
         public static function flatMap($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14707,7 +14768,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $class
          * @return static
          * @static
-         */
+         */ 
         public static function mapInto($class)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14720,7 +14781,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string|null $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function max($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14733,7 +14794,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function merge($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14746,7 +14807,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $values
          * @return static
          * @static
-         */
+         */ 
         public static function combine($values)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14759,7 +14820,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function union($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14772,7 +14833,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string|null $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function min($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14786,7 +14847,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $offset
          * @return static
          * @static
-         */
+         */ 
         public static function nth($step, $offset = 0)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14799,7 +14860,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $keys
          * @return static
          * @static
-         */
+         */ 
         public static function only($keys)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14813,7 +14874,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $perPage
          * @return static
          * @static
-         */
+         */ 
         public static function forPage($page, $perPage)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14828,7 +14889,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function partition($key, $operator = null, $value = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14841,7 +14902,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function pipe($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14853,7 +14914,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return mixed
          * @static
-         */
+         */ 
         public static function pop()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14867,7 +14928,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $key
          * @return $this
          * @static
-         */
+         */ 
         public static function prepend($value, $key = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14880,7 +14941,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return $this
          * @static
-         */
+         */ 
         public static function push($value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14893,7 +14954,7 @@ namespace KodiCMS\Assets\Facades {
          * @param \Traversable|array $source
          * @return $this
          * @static
-         */
+         */ 
         public static function concat($source)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14907,7 +14968,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $default
          * @return mixed
          * @static
-         */
+         */ 
         public static function pull($key, $default = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14921,7 +14982,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return $this
          * @static
-         */
+         */ 
         public static function put($key, $value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14932,10 +14993,10 @@ namespace KodiCMS\Assets\Facades {
          * Get one or a specified number of items randomly from the collection.
          *
          * @param int|null $number
-         * @return mixed
+         * @return mixed 
          * @throws \InvalidArgumentException
          * @static
-         */
+         */ 
         public static function random($number = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14949,7 +15010,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $initial
          * @return mixed
          * @static
-         */
+         */ 
         public static function reduce($callback, $initial = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14962,7 +15023,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|mixed $callback
          * @return static
          * @static
-         */
+         */ 
         public static function reject($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14974,7 +15035,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return static
          * @static
-         */
+         */ 
         public static function reverse()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -14988,7 +15049,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $strict
          * @return mixed
          * @static
-         */
+         */ 
         public static function search($value, $strict = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15000,7 +15061,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return mixed
          * @static
-         */
+         */ 
         public static function shift()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15013,7 +15074,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $seed
          * @return static
          * @static
-         */
+         */ 
         public static function shuffle($seed = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15027,7 +15088,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $length
          * @return static
          * @static
-         */
+         */ 
         public static function slice($offset, $length = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15040,7 +15101,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $numberOfGroups
          * @return static
          * @static
-         */
+         */ 
         public static function split($numberOfGroups)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15053,7 +15114,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $size
          * @return static
          * @static
-         */
+         */ 
         public static function chunk($size)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15066,7 +15127,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|null $callback
          * @return static
          * @static
-         */
+         */ 
         public static function sort($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15081,7 +15142,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $descending
          * @return static
          * @static
-         */
+         */ 
         public static function sortBy($callback, $options = 0, $descending = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15095,7 +15156,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $options
          * @return static
          * @static
-         */
+         */ 
         public static function sortByDesc($callback, $options = 0)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15109,7 +15170,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $descending
          * @return static
          * @static
-         */
+         */ 
         public static function sortKeys($options = 0, $descending = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15122,7 +15183,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $options
          * @return static
          * @static
-         */
+         */ 
         public static function sortKeysDesc($options = 0)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15137,7 +15198,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $replacement
          * @return static
          * @static
-         */
+         */ 
         public static function splice($offset, $length = null, $replacement = array())
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15150,7 +15211,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable|string|null $callback
          * @return mixed
          * @static
-         */
+         */ 
         public static function sum($callback = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15163,7 +15224,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $limit
          * @return static
          * @static
-         */
+         */ 
         public static function take($limit)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15176,7 +15237,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return $this
          * @static
-         */
+         */ 
         public static function tap($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15189,7 +15250,7 @@ namespace KodiCMS\Assets\Facades {
          * @param callable $callback
          * @return $this
          * @static
-         */
+         */ 
         public static function transform($callback)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15203,7 +15264,7 @@ namespace KodiCMS\Assets\Facades {
          * @param bool $strict
          * @return static
          * @static
-         */
+         */ 
         public static function unique($key = null, $strict = false)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15216,7 +15277,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string|callable|null $key
          * @return static
          * @static
-         */
+         */ 
         public static function uniqueStrict($key = null)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15228,7 +15289,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return static
          * @static
-         */
+         */ 
         public static function values()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15237,14 +15298,14 @@ namespace KodiCMS\Assets\Facades {
 
         /**
          * Zip the collection together with one or more arrays.
-         *
+         * 
          * e.g. new Collection([1, 2, 3])->zip([4, 5, 6]);
          *      => [[1, 4], [2, 5], [3, 6]]
          *
          * @param mixed $items
          * @return static
          * @static
-         */
+         */ 
         public static function zip($items)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15258,7 +15319,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return static
          * @static
-         */
+         */ 
         public static function pad($size, $value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15270,7 +15331,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return array
          * @static
-         */
+         */ 
         public static function toArray()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15282,7 +15343,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return array
          * @static
-         */
+         */ 
         public static function jsonSerialize()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15295,7 +15356,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $options
          * @return string
          * @static
-         */
+         */ 
         public static function toJson($options = 0)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15307,7 +15368,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return \ArrayIterator
          * @static
-         */
+         */ 
         public static function getIterator()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15320,7 +15381,7 @@ namespace KodiCMS\Assets\Facades {
          * @param int $flags
          * @return \CachingIterator
          * @static
-         */
+         */ 
         public static function getCachingIterator($flags = 1)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15332,7 +15393,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return int
          * @static
-         */
+         */ 
         public static function count()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15344,7 +15405,7 @@ namespace KodiCMS\Assets\Facades {
          *
          * @return \Illuminate\Support\Collection
          * @static
-         */
+         */ 
         public static function toBase()
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15357,7 +15418,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $key
          * @return bool
          * @static
-         */
+         */ 
         public static function offsetExists($key)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15370,7 +15431,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $key
          * @return mixed
          * @static
-         */
+         */ 
         public static function offsetGet($key)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15384,7 +15445,7 @@ namespace KodiCMS\Assets\Facades {
          * @param mixed $value
          * @return void
          * @static
-         */
+         */ 
         public static function offsetSet($key, $value)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15397,7 +15458,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $key
          * @return void
          * @static
-         */
+         */ 
         public static function offsetUnset($key)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15410,7 +15471,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $method
          * @return void
          * @static
-         */
+         */ 
         public static function proxy($method)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15424,7 +15485,7 @@ namespace KodiCMS\Assets\Facades {
          * @param object|callable $macro
          * @return void
          * @static
-         */
+         */ 
         public static function macro($name, $macro)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15435,10 +15496,10 @@ namespace KodiCMS\Assets\Facades {
          * Mix another object into the class.
          *
          * @param object $mixin
-         * @return void
+         * @return void 
          * @throws \ReflectionException
          * @static
-         */
+         */ 
         public static function mixin($mixin)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15451,7 +15512,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $name
          * @return bool
          * @static
-         */
+         */ 
         public static function hasMacro($name)
         {
             //Method inherited from \Illuminate\Support\Collection            
@@ -15462,13 +15523,13 @@ namespace KodiCMS\Assets\Facades {
 
     class Meta
     {
-
+        
         /**
-         *
+         * 
          *
          * @return \KodiCMS\Assets\AssetsInterface
          * @static
-         */
+         */ 
         public static function assets()
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15476,12 +15537,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param \KodiCMS\Assets\MetaDataInterface $data
          * @return $this
          * @static
-         */
+         */ 
         public static function setMetaData($data)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15489,12 +15550,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $title
          * @return $this
          * @static
-         */
+         */ 
         public static function setTitle($title)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15502,12 +15563,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $description
          * @return $this
          * @static
-         */
+         */ 
         public static function setMetaDescription($description)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15515,12 +15576,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string|array $keywords
          * @return $this
          * @static
-         */
+         */ 
         public static function setMetaKeywords($keywords)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15528,12 +15589,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $robots
          * @return $this
          * @static
-         */
+         */ 
         public static function setMetaRobots($robots)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15541,12 +15602,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param \KodiCMS\Assets\SocialMediaTagsInterface $socialTags
          * @return $this
          * @static
-         */
+         */ 
         public static function addSocialTags($socialTags)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15554,13 +15615,13 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $attributes
          * @param null|string $group
          * @return $this
          * @static
-         */
+         */ 
         public static function addMeta($attributes, $group = null)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15575,7 +15636,7 @@ namespace KodiCMS\Assets\Facades {
          * @param string $type
          * @return $this
          * @static
-         */
+         */ 
         public static function setFavicon($url, $rel = 'shortcut icon', $type = 'image/x-icon')
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15583,7 +15644,7 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $handle
          * @param string $content
@@ -15591,7 +15652,7 @@ namespace KodiCMS\Assets\Facades {
          * @param null|string $dependency
          * @return $this
          * @static
-         */
+         */ 
         public static function addTagToGroup($handle, $content, $params = array(), $dependency = null)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15599,12 +15660,12 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string|null $handle
          * @return $this
          * @static
-         */
+         */ 
         public static function removeFromGroup($handle = null)
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15612,11 +15673,11 @@ namespace KodiCMS\Assets\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function render()
         {
             //Method inherited from \KodiCMS\Assets\Meta            
@@ -15631,97 +15692,97 @@ namespace SleepingOwl\Admin\Facades {
 
     class WysiwygManager
     {
-
+        
         /**
-         *
+         * 
          *
          * @return string|null
          * @static
-         */
+         */ 
         public static function getDefaultEditorId()
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::getDefaultEditorId();
         }
 
         /**
-         *
+         * 
          *
          * @param string $editorId
          * @param \SleepingOwl\Admin\Wysiwyg\WysiwygFilterInterface|null $filter
          * @param string|null $name
          * @return \SleepingOwl\Admin\Wysiwyg\WysiwygEditorInterface
          * @static
-         */
+         */ 
         public static function register($editorId, $filter = null, $name = null)
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::register($editorId, $filter, $name);
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\Wysiwyg\Collection|\SleepingOwl\Admin\Wysiwyg\WysiwygEditorInterface[]
          * @static
-         */
+         */ 
         public static function getFilters()
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::getFilters();
         }
 
         /**
-         *
+         * 
          *
          * @param string $editorId
          * @return \SleepingOwl\Admin\Wysiwyg\WysiwygEditorInterface|null
          * @static
-         */
+         */ 
         public static function getEditor($editorId)
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::getEditor($editorId);
         }
 
         /**
-         *
+         * 
          *
          * @static
-         */
+         */ 
         public static function loadDefaultEditor()
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::loadDefaultEditor();
         }
 
         /**
-         *
+         * 
          *
          * @param string $editorId
          * @return bool
          * @static
-         */
+         */ 
         public static function loadEditor($editorId)
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::loadEditor($editorId);
         }
 
         /**
-         *
+         * 
          *
          * @param string $editorId
          * @param string $text
          * @return string string
          * @throws WysiwygException
          * @static
-         */
+         */ 
         public static function applyFilter($editorId, $text)
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::applyFilter($editorId, $text);
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getFiltersList()
         {
             return \SleepingOwl\Admin\Wysiwyg\Manager::getFiltersList();
@@ -15731,18 +15792,18 @@ namespace SleepingOwl\Admin\Facades {
 
     class MessageStack
     {
-
+         
     }
 
     class Admin
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \SleepingOwl\Admin\TemplateInterface $template
          * @static
-         */
+         */ 
         public static function setTemplate($template)
         {
             return \SleepingOwl\Admin\Admin::setTemplate($template);
@@ -15752,184 +15813,184 @@ namespace SleepingOwl\Admin\Facades {
          * Initialize class.
          *
          * @static
-         */
+         */ 
         public static function initialize()
         {
             return \SleepingOwl\Admin\Admin::initialize();
         }
 
         /**
-         *
+         * 
          *
          * @param string $class
          * @param \Closure|null $callback
          * @return $this
          * @static
-         */
+         */ 
         public static function registerModel($class, $callback = null)
         {
             return \SleepingOwl\Admin\Admin::registerModel($class, $callback);
         }
 
         /**
-         *
+         * 
          *
          * @param \SleepingOwl\Admin\ModelConfigurationInterface $model
          * @return $this
          * @static
-         */
+         */ 
         public static function register($model)
         {
             return \SleepingOwl\Admin\Admin::register($model);
         }
 
         /**
-         *
+         * 
          *
          * @param array $sections
          * @return $this
          * @static
-         */
+         */ 
         public static function registerSections($sections)
         {
             return \SleepingOwl\Admin\Admin::registerSections($sections);
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getMissedSections()
         {
             return \SleepingOwl\Admin\Admin::getMissedSections();
         }
 
         /**
-         *
+         * 
          *
          * @param string $class
          * @param \SleepingOwl\Admin\ModelConfigurationInterface $model
          * @return $this
          * @static
-         */
+         */ 
         public static function setModel($class, $model)
         {
             return \SleepingOwl\Admin\Admin::setModel($class, $model);
         }
 
         /**
-         *
+         * 
          *
          * @param string|\SleepingOwl\Admin\Model $class
          * @return \SleepingOwl\Admin\ModelConfigurationInterface
          * @static
-         */
+         */ 
         public static function getModel($class)
         {
             return \SleepingOwl\Admin\Admin::getModel($class);
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\ModelConfigurationInterface[]|\SleepingOwl\Admin\ModelCollection
          * @static
-         */
+         */ 
         public static function getModels()
         {
             return \SleepingOwl\Admin\Admin::getModels();
         }
 
         /**
-         *
+         * 
          *
          * @param string $class
          * @return bool
          * @static
-         */
+         */ 
         public static function hasModel($class)
         {
             return \SleepingOwl\Admin\Admin::hasModel($class);
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\NavigationInterface
          * @static
-         */
+         */ 
         public static function navigation()
         {
             return \SleepingOwl\Admin\Admin::navigation();
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\MetaInterface
          * @static
-         */
+         */ 
         public static function meta()
         {
             return \SleepingOwl\Admin\Admin::meta();
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\TemplateInterface
          * @static
-         */
+         */ 
         public static function template()
         {
             return \SleepingOwl\Admin\Admin::template();
         }
 
         /**
-         *
+         * 
          *
          * @param string $class
          * @param int $priority
          * @return \SleepingOwl\Admin\Page
          * @static
-         */
+         */ 
         public static function addMenuPage($class = null, $priority = 100)
         {
             return \SleepingOwl\Admin\Admin::addMenuPage($class, $priority);
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\Navigation
          * @deprecated
          * @static
-         */
+         */ 
         public static function getNavigation()
         {
             return \SleepingOwl\Admin\Admin::getNavigation();
         }
 
         /**
-         *
+         * 
          *
          * @param string|\SleepingOwl\Admin\Renderable $content
          * @param string|null $title
          * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
          * @static
-         */
+         */ 
         public static function view($content, $title = null)
         {
             return \SleepingOwl\Admin\Admin::view($content, $title);
         }
 
         /**
-         *
+         * 
          *
          * @static
-         */
+         */ 
         public static function scriptVariables()
         {
             return \SleepingOwl\Admin\Admin::scriptVariables();
@@ -15939,13 +16000,13 @@ namespace SleepingOwl\Admin\Facades {
 
     class Template
     {
-
+        
         /**
          * Получение названия текущего шаблона.
          *
          * @return string
          * @static
-         */
+         */ 
         public static function name()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::name();
@@ -15956,7 +16017,7 @@ namespace SleepingOwl\Admin\Facades {
          *
          * @return string
          * @static
-         */
+         */ 
         public static function version()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::version();
@@ -15967,60 +16028,60 @@ namespace SleepingOwl\Admin\Facades {
          *
          * @return string
          * @static
-         */
+         */ 
         public static function homepage()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::homepage();
         }
 
         /**
-         *
+         * 
          *
          * @static
-         */
+         */ 
         public static function initialize()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::initialize();
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function getViewNamespace()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::getViewNamespace();
         }
 
         /**
-         *
+         * 
          *
          * @static
-         */
+         */ 
         public static function assetDir()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::assetDir();
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function getLogo()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::getLogo();
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function getLogoMini()
         {
             return \SleepingOwl\Admin\Templates\TemplateDefault::getLogoMini();
@@ -16031,7 +16092,7 @@ namespace SleepingOwl\Admin\Facades {
          *
          * @return string
          * @static
-         */
+         */ 
         public static function longName()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16039,11 +16100,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\Templates\Breadcrumbs
          * @static
-         */
+         */ 
         public static function breadcrumbs()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16051,11 +16112,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\Templates\MetaInterface
          * @static
-         */
+         */ 
         public static function meta()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16063,11 +16124,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return \SleepingOwl\Admin\Templates\NavigationInterface
          * @static
-         */
+         */ 
         public static function navigation()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16080,7 +16141,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $path относительный путь до файла, например `js/app.js`
          * @return string
          * @static
-         */
+         */ 
         public static function assetPath($path = null)
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16088,11 +16149,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function getTitle()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16100,13 +16161,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $title
          * @param string $separator
          * @return string
          * @static
-         */
+         */ 
         public static function makeTitle($title, $separator = '|')
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16114,12 +16175,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $view
          * @return string
          * @static
-         */
+         */ 
         public static function getViewPath($view)
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16127,14 +16188,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string|\View $view
          * @param array $data
          * @param array $mergeData
          * @return \Illuminate\Contracts\View\Factory|\View
          * @static
-         */
+         */ 
         public static function view($view, $data = array(), $mergeData = array())
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16142,12 +16203,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $key
          * @return string
          * @static
-         */
+         */ 
         public static function renderBreadcrumbs($key)
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16155,11 +16216,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return string
          * @static
-         */
+         */ 
         public static function renderNavigation()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16167,12 +16228,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $title
          * @return string
          * @static
-         */
+         */ 
         public static function renderMeta($title)
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16184,7 +16245,7 @@ namespace SleepingOwl\Admin\Facades {
          *
          * @return array
          * @static
-         */
+         */ 
         public static function toArray()
         {
             //Method inherited from \SleepingOwl\Admin\Templates\Template            
@@ -16195,13 +16256,13 @@ namespace SleepingOwl\Admin\Facades {
 
     class Navigation
     {
-
+        
         /**
          * Overload current page.
          *
          * @return \KodiComponents\Navigation\Contracts\PageInterface|null
          * @static
-         */
+         */ 
         public static function getCurrentPage()
         {
             return \SleepingOwl\Admin\Navigation::getCurrentPage();
@@ -16212,20 +16273,20 @@ namespace SleepingOwl\Admin\Facades {
          *
          * @param \SleepingOwl\Admin\Collection $pages
          * @static
-         */
+         */ 
         public static function setAliasesId($pages)
         {
             return \SleepingOwl\Admin\Navigation::setAliasesId($pages);
         }
 
         /**
-         *
+         * 
          *
          * @param array $data
          * @param string $class
          * @return \KodiComponents\Navigation\PageInterface
          * @static
-         */
+         */ 
         public static function makePage($data, $class = 'KodiComponents\Navigation\Contracts\PageInterface')
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16233,11 +16294,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return null|string
          * @static
-         */
+         */ 
         public static function getCurrentUrl()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16245,12 +16306,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param null|string $url
          * @return $this
          * @static
-         */
+         */ 
         public static function setCurrentUrl($url)
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16258,11 +16319,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $navigation
          * @static
-         */
+         */ 
         public static function setFromArray($navigation)
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16270,12 +16331,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string|array|\KodiComponents\Navigation\PageInterface $page
          * @return \KodiComponents\Navigation\PageInterface|null
          * @static
-         */
+         */ 
         public static function addPage($page)
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16283,11 +16344,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return \KodiComponents\Navigation\PageCollection|\KodiComponents\Navigation\PageInterface[]
          * @static
-         */
+         */ 
         public static function getPages()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16295,11 +16356,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return int
          * @static
-         */
+         */ 
         public static function countPages()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16307,12 +16368,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param \Closure $accessLogic
          * @return $this
          * @static
-         */
+         */ 
         public static function setAccessLogic($accessLogic)
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16320,11 +16381,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return \Closure
          * @static
-         */
+         */ 
         public static function getAccessLogic()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16332,11 +16393,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return $this
          * @static
-         */
+         */ 
         public static function filterByAccessRights()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16344,11 +16405,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return $this
          * @static
-         */
+         */ 
         public static function filterEmptyPages()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16356,11 +16417,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return $this
          * @static
-         */
+         */ 
         public static function sort()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16368,11 +16429,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return bool
          * @static
-         */
+         */ 
         public static function hasChild()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16380,11 +16441,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function toArray()
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16392,12 +16453,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string|null $view
          * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
          * @static
-         */
+         */ 
         public static function render($view = null)
         {
             //Method inherited from \KodiComponents\Navigation\Navigation            
@@ -16408,14 +16469,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class TableColumn
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16429,7 +16490,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16437,14 +16498,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16452,12 +16513,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16465,11 +16526,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16482,7 +16543,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16495,7 +16556,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16503,13 +16564,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16520,14 +16581,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class TableColumnEditable
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16541,7 +16602,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16549,14 +16610,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16564,12 +16625,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16577,11 +16638,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16594,7 +16655,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16607,7 +16668,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16615,13 +16676,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16632,14 +16693,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class TableColumnFilter
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16653,7 +16714,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16661,14 +16722,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16676,12 +16737,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16689,11 +16750,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16706,7 +16767,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16719,7 +16780,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16727,13 +16788,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16744,14 +16805,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class DisplayFilter
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16765,7 +16826,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16773,14 +16834,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16788,12 +16849,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16801,11 +16862,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16818,7 +16879,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16831,7 +16892,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16839,13 +16900,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16856,14 +16917,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class Form
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16877,7 +16938,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16885,14 +16946,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16900,12 +16961,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16913,11 +16974,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16930,7 +16991,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16943,7 +17004,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16951,13 +17012,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16968,14 +17029,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class FormElement
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16989,7 +17050,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -16997,14 +17058,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17012,12 +17073,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17025,11 +17086,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17042,7 +17103,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17055,7 +17116,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17063,13 +17124,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17080,14 +17141,14 @@ namespace SleepingOwl\Admin\Facades {
 
     class Display
     {
-
+        
         /**
-         *
+         * 
          *
          * @param \Illuminate\Contracts\Routing\Registrar $router
          * @return void
          * @static
-         */
+         */ 
         public static function registerRoutes($router)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17101,7 +17162,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $class
          * @return $this
          * @static
-         */
+         */ 
         public static function bind($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17109,14 +17170,14 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param string $class
-         * @return $this
+         * @return $this 
          * @deprecated Use `bind` method
          * @static
-         */
+         */ 
         public static function add($alias, $class)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17124,12 +17185,12 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param array $classes
          * @return $this
          * @static
-         */
+         */ 
         public static function register($classes)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17137,11 +17198,11 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @return array
          * @static
-         */
+         */ 
         public static function getAliases()
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17154,7 +17215,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return string
          * @static
-         */
+         */ 
         public static function getAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17167,7 +17228,7 @@ namespace SleepingOwl\Admin\Facades {
          * @param string $alias
          * @return bool
          * @static
-         */
+         */ 
         public static function hasAlias($alias)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17175,13 +17236,13 @@ namespace SleepingOwl\Admin\Facades {
         }
 
         /**
-         *
+         * 
          *
          * @param string $alias
          * @param array $arguments
          * @return object
          * @static
-         */
+         */ 
         public static function makeClass($alias, $arguments)
         {
             //Method inherited from \SleepingOwl\Admin\AliasBinder            
@@ -17192,49 +17253,49 @@ namespace SleepingOwl\Admin\Facades {
 
     class Widgets
     {
-
+        
         /**
-         *
+         * 
          *
          * @param $widget
          * @return $this
          * @static
-         */
+         */ 
         public static function registerWidget($widget)
         {
             return \SleepingOwl\Admin\Widgets\WidgetsRegistry::registerWidget($widget);
         }
 
         /**
-         *
+         * 
          *
          * @param \SleepingOwl\Admin\Widgets\Factory $factory
          * @static
-         */
+         */ 
         public static function placeWidgets($factory)
         {
             return \SleepingOwl\Admin\Widgets\WidgetsRegistry::placeWidgets($factory);
         }
 
         /**
-         *
+         * 
          *
          * @param mixed $widget
          * @return mixed
          * @static
-         */
+         */ 
         public static function makeWidget($widget)
         {
             return \SleepingOwl\Admin\Widgets\WidgetsRegistry::makeWidget($widget);
         }
 
         /**
-         *
+         * 
          *
          * @param $widget
          * @return \Closure
          * @static
-         */
+         */ 
         public static function createClassWidget($widget)
         {
             return \SleepingOwl\Admin\Widgets\WidgetsRegistry::createClassWidget($widget);
@@ -19532,6 +19593,10 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Image extends \Intervention\Image\Facades\Image
+    {
+    }
 
     class Form extends \Collective\Html\FormFacade
     {

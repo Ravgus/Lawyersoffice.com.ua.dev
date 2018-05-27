@@ -25,6 +25,8 @@ use File;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Worker whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Worker whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $sphere
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Worker whereSphere($value)
  */
 class Worker extends Model
 {

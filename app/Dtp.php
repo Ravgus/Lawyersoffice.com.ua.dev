@@ -19,6 +19,8 @@ use File;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Dtp whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Dtp whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $img
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Dtp whereImg($value)
  */
 class Dtp extends Model
 {

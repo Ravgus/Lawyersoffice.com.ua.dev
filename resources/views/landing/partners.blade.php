@@ -1,5 +1,12 @@
 @extends('layouts.main')
 
+@section('meta')
+    <meta name="description"
+          content="На данной странице перечисляются партнеры и фирмы, с которыми работает данная фирма">
+    <meta name="author" content="Bang-studio.com">
+    <meta name="keywords" content="наши партнеры ,Ми співпрацюємо, парнеры, херсон, грицак, терно, бубенщиков">
+@endsection
+
 @section('title', $title)
 
 @section('add_css')

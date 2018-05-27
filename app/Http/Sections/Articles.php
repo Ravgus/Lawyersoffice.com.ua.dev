@@ -52,8 +52,8 @@ class Articles extends Section implements Initializable
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
             AdminColumn::text('id')->setLabel('ID'),
-            AdminColumn::link('name')->setLabel('Название')->setWidth('15%'),
-            AdminColumn::text('description')->setLabel('Краткое описание')->setHtmlAttribute('class', 'text-muted')->setWidth('35%'),
+            AdminColumn::link('name')->setLabel('Название'),
+            AdminColumn::text('description')->setLabel('Краткое описание')->setHtmlAttribute('class', 'text-muted'),
             AdminColumn::image('lg_img')->setLabel('Изображение'),
             AdminColumn::text('updated_at')->setLabel('Дата последнего обновления'),
         ]);

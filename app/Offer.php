@@ -19,6 +19,8 @@ use File;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Offer whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Offer whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $img
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Offer whereImg($value)
  */
 class Offer extends Model
 {

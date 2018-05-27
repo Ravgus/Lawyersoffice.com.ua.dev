@@ -4,15 +4,15 @@
 
         <div class="team_member team_member_odd">
             <div class="row">
-                <div class="col-4"></div>
-                <div class="col-12 col-md-8">
+                <div class="col-5"></div>
+                <div class="col-12 col-md-6">
                     <div class="photo" style="background-image: url({{ $worker->img }})">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-5"></div>
-                {{--<div class="col-7 col-lg-6">
+                {{--<div class="col-6 col-lg-5">
                     <div class="quote">
                         <span>“Цитата.”</span>
                     </div>
@@ -47,14 +47,15 @@
 
         <div class="team_member">
             <div class="row">
-                <div class="col-12 col-md-8">
+                <div class="col-1"></div>
+                <div class="col-12 col-md-6">
                     <div class="photo" style="background-image: url({{ $worker->img }})">
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-1 outer"></div>
-                {{--<div class="col-7 col-lg-6 ">
+                <div class="col-2 outer"></div>
+                {{--<div class="col-6 col-lg-5 ">
                     <div class="quote">
                         <span>“Цитата.”</span>
                     </div>

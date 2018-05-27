@@ -1,5 +1,13 @@
 @extends('layouts.main')
 
+@section('meta')
+    <meta name="description"
+          content="На данной странице перечисляются основные направления деятельности фирмы, ее предложения">
+    <meta name="author" content="Bang-studio.com">
+    <meta name="keywords"
+          content="услуги, Кримінальні справи, Захист ваших бізнес-інтересів, Господарські та цивільні справи, адвокаты, херсон, грицак, терно, бубенщиков">
+@endsection
+
 @section('title', $title)
 
 @section('header', 'content')

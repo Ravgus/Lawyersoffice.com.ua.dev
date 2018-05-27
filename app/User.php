@@ -26,6 +26,8 @@ use App\Notifications\ResetPassword;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
+ * @property string|null $last_entry
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastEntry($value)
  */
 class User extends Authenticatable
 {

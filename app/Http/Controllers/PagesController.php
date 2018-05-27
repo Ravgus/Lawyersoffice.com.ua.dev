@@ -57,6 +57,9 @@ class PagesController extends Controller
     public function article($alias)
     {
         $article = Article::where('alias', $alias)->get();
+        if ($article->isEmpty()) {
+            abort(404);
+        }
         return view('landing.article', ['article' => $article[0]]);
     }
 }

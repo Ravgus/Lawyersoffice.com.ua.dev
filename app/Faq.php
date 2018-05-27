@@ -18,6 +18,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Faq whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Faq whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $question
+ * @property string $answer
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Faq whereAnswer($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Faq whereQuestion($value)
  */
 class Faq extends Model
 {

@@ -1,5 +1,11 @@
 @extends('layouts.main')
 
+@section('meta')
+    <meta name="description" content="На данной странице описывается оказываемая помощь в случае возникновения ДТП">
+    <meta name="author" content="Bang-studio.com">
+    <meta name="keywords" content="услуги, ДТП, помощь при дтп, адвокаты, херсон, грицак, терно, бубенщиков">
+@endsection
+
 @section('title', $title)
 
 @section('header', 'content')

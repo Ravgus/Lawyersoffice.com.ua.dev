@@ -1,5 +1,13 @@
 @extends('layouts.main')
 
+@section('meta')
+    <meta name="description"
+          content="На данной странице находится главная страница сайта, она описывает преимущества данной фирмы, ее участников, их опыт">
+    <meta name="author" content="Bang-studio.com">
+    <meta name="keywords"
+          content="главная станица, партнеры, о нас, про нас, Професіонали своєї справи, Працюємо 24/7, Все для вас, адвокаты, херсон, грицак, терно, бубенщиков">
+@endsection
+
 @section('title', $title)
 
 @section('logo_size', '572px')
