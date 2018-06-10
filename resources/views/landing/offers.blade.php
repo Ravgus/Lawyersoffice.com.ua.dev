@@ -48,7 +48,7 @@
                     @foreach($offers as $offer)
 
                         <div class="col-12 col-md-4 advantage_{{ $loop->iteration }}">
-                            <img src="{{ $offer->img }}" alt="icon" class="icon">
+                            <img src="{{ $offer->img }}" alt="icon" class="icon" width="150px" height="auto">
                             <div class="title_icon">{{ $offer->name }}</div>
                             <div class="text_icon dsp_sm">
                                 {!! $offer->text !!}

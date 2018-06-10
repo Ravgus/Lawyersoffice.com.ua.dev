@@ -100,19 +100,6 @@ $(function () {
 
 });
 
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        items: 1,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        autoplayTimeout: 5000 /*автопрокрутка время в мс*/
-    });
-});
-
 $(window).load(function () {
 
     $(".loader_inner").fadeOut();
@@ -134,7 +121,6 @@ $(window).load(function () {
     $(".team .title").animated("fadeInDown", "fadeOutLeft");
     $(".team .photo").animated("fadeInLeft", "fadeOutLeft");
     $(".team .info").animated("fadeInRight", "fadeOutLeft");
-
 
 });
 

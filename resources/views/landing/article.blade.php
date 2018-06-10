@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('meta')
-    <meta name="description" content="{{ mb_substr($article->description, 0, 100) }}">
+    <meta name="description" content="{{ mb_substr($article->description, 0, 150) }}">
     <meta name="author" content="Bang-studio.com">
     <meta name="keywords" content="{{ $article->name }}, новость, херсон, грицак, терно, бубенщиков">
 @endsection
 
-@section('title', $article->name)
+@section('title', 'Адвокатський Офіс - ' . $article->name)
 
 @section('header', 'content')
 

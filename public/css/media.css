@@ -153,6 +153,11 @@
         height: 540px;
     }
 
+    .photo.photo_slider {
+        /*height: 340px;*/
+        height: 300px;
+    }
+
     .info {
         margin-top: -280px;
     }

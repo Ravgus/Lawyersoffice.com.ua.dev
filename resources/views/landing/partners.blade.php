@@ -49,32 +49,45 @@
 
             <div class="owl-carousel">
 
-                @foreach($partners as $partner)
+                @if(isset($partners))
 
-                    <div class="team_member item">
-                        <div class="row">
-                            <div class="col-sm-12 col-lg-8">
-                                <div class="photo" style="background-image: url({{ $partner->img }})">
+                    @foreach($partners as $partner)
+
+                        <div class="team_member item">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-8">
+                                    <div class="photo photo_slider" style="background-image: url({{ $partner->img }})">
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-2 outer_slider"></div>
+                                <div class="col">
+                                    <div class="info">
+                                        <h2>{{ $partner->name }}</h2>
+                                        <div class="text_info">
+                                            {!! $partner->text !!}
+                                        </div>
+                                        <a class="more-link"
+                                           href="{{ $partner->link }}"><span>{{ $partner->link }}</span></a>
+                                    </div>
+                                </div>
+                                <div class="col-1 outer_slider"></div>
                             </div>
                         </div>
-                        <div class="row ">
-                            <div class="col-2 outer_slider"></div>
-                            <div class="col">
-                                <div class="info">
-                                    <h2>{{ $partner->name }}</h2>
-                                    <div class="text_info">
-                                        {!! $partner->text !!}
-                                    </div>
-                                    <a class="more-link"
-                                       href="{{ $partner->link }}"><span>{{ $partner->link }}</span></a>
-                                </div>
+
+                    @endforeach
+
+                @else
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="photo photo_slider" style="background-color: #E4E7E8;">
                             </div>
-                            <div class="col-1 outer_slider"></div>
                         </div>
                     </div>
 
-                @endforeach
+                @endif
 
             </div>
         </div>
@@ -84,4 +97,18 @@
 
 @section('add_js')
     <script src='libs/owlcarousel/dist/owl.carousel.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                items: 1,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                autoplayTimeout: 5000 /*автопрокрутка время в мс*/
+            });
+        });
+    </script>
 @endsection

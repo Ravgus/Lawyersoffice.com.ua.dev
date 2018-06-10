@@ -6,7 +6,7 @@
 <!--[if IE 8 ]>
 <html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="ru"> <!--<![endif]-->
+<html lang="uk"> <!--<![endif]-->
 
 <head>
 
@@ -17,7 +17,6 @@
     @yield('meta')
 
     <title>@yield('title')</title>
-    <meta name="description" content="">
 
     <link rel="shortcut icon" href={{ asset("images/theme/favicon/fav.ico") }} type="image/x-icon">
     <link rel="apple-touch-icon" href={{ asset("images/theme/favicon/apple-touch-icon.png") }}>

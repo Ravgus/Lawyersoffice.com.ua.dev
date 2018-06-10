@@ -273,6 +273,11 @@ a:hover {
     background-repeat: no-repeat;
 }
 
+.photo.photo_slider {
+    /*height: 340px;*/
+    height: 480px;
+}
+
 /*.photo_1 {
 	background-image: url(../images/theme/IMG_2.png);
 }
