@@ -1,9 +1,7 @@
 @extends('layouts.main')
 
 @section('meta')
-    <meta name="description" content="На данной странице указаны контакты для обратной связи с фирмой">
-    <meta name="author" content="Bang-studio.com">
-    <meta name="keywords" content="контакты, почта, телефон, карта, адвокаты, херсон, грицак, терно, бубенщиков">
+    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Наші контакти. Грицак, Терно, Бубенщиков: + 38 (095) 02-39-901', 'key' => 'контакты, почта, телефон, карта, контакти, пошта', 'desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38(095) 02-39-901, м.Херсон, вул. Робоча, 64-а, https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38(095) 02-39-901, м.Херсон, вул. Робоча, 64-а, https://lawyersoffice.com.ua'])
 @endsection
 
 @section('title', $title)

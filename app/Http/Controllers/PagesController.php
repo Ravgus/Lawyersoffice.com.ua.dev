@@ -16,7 +16,7 @@ class PagesController extends Controller
     public function main()
     {
         $workers = Worker::all();
-        return view('landing.main', ['title' => 'Адвокатський Офіс', 'workers' => $workers]);
+        return view('landing.main', ['title' => 'Адвокатський Офіс - Грицак, Терно, Бубенщиков', 'workers' => $workers]);
     }
 
     public function offers()

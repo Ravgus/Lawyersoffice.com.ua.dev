@@ -1,10 +1,7 @@
 @extends('layouts.main')
 
 @section('meta')
-    <meta name="description" content="На данной странице даются ответы на самые часто задаваемые вопросы">
-    <meta name="author" content="Bang-studio.com">
-    <meta name="keywords"
-          content="вопросы, ответы, faq, Відповіді, запитання, адвокаты, херсон, грицак, терно, бубенщиков">
+    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Питання/Відповіді – Грицак, Терно, Бубенщиков: + 38 (095) 02-39-901', 'key' => 'вопросы, ответы, faq, Відповіді, запитання', 'desc' => 'Адвокатський Офіс – Відповіді на найбільш поширені питання. + 38(095) 02-39-901. https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Відповіді на найбільш поширені питання. + 38(095) 02-39-901. https://lawyersoffice.com.ua'])
 @endsection
 
 @section('title', $title)
@@ -42,24 +39,37 @@
                 </div>
             </div>
 
-            @foreach($faqs as $faq)
+            @if(!isset($faqs))
 
-                <div class="row">
-                    <div class="col">
-                        <div class="quest">
-                            <div class="title_quest">
-                                <span>{{ $faq->question }}</span>
-                                <img class="arrow" src="images/theme/svg/arrow.svg" alt="more" height="12px"
-                                     width="auto">
-                            </div>
-                            <div class="text_quest">
-                                {!!  $faq->answer !!}
+                @foreach($faqs as $faq)
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="quest">
+                                <div class="title_quest">
+                                    <span>{{ $faq->question }}</span>
+                                    <img class="arrow" src="images/theme/svg/arrow.svg" alt="more" height="12px"
+                                         width="auto">
+                                </div>
+                                <div class="text_quest">
+                                    {!!  $faq->answer !!}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            @endforeach
+                    @if($loop->count == 1 || $loop->count == 2)
+                        <div style="height:25vh; width: auto;"></div>
+                    @endif
+
+                @endforeach
+
+            @else
+
+                <div style="text-align: center;"><h2>Немає питань</h2></div>
+                <div style="height:30vh; width: auto;"></div>
+
+            @endif
 
         </div>
     </div>

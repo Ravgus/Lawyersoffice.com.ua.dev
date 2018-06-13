@@ -6,7 +6,7 @@
 <!--[if IE 8 ]>
 <html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="uk"> <!--<![endif]-->
+<html lang="uk" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
 
 <head>
 

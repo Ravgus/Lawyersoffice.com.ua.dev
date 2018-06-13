@@ -1,10 +1,7 @@
 @extends('layouts.main')
 
 @section('meta')
-    <meta name="description"
-          content="На данной странице перечисляются партнеры и фирмы, с которыми работает данная фирма">
-    <meta name="author" content="Bang-studio.com">
-    <meta name="keywords" content="наши партнеры ,Ми співпрацюємо, парнеры, херсон, грицак, терно, бубенщиков">
+    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Наші партнери. Грицак, Терно, Бубенщиков: + 38 (095) 02-39-901', 'key' => 'наши партнеры, Ми співпрацюємо, парнеры', 'desc' => 'Адвокатський Офіс – Інформація про наших партнерів. + 38(095) 02-39-901. https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Інформація про наших партнерів. + 38(095) 02-39-901. https://lawyersoffice.com.ua'])
 @endsection
 
 @section('title', $title)
@@ -47,9 +44,9 @@
                 </div>
             </div>
 
-            <div class="owl-carousel">
+            @if(!isset($partners))
 
-                @if(isset($partners))
+                <div class="owl-carousel">
 
                     @foreach($partners as $partner)
 
@@ -78,18 +75,15 @@
 
                     @endforeach
 
-                @else
+                </div>
 
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="photo photo_slider" style="background-color: #E4E7E8;">
-                            </div>
-                        </div>
-                    </div>
+            @else
 
-                @endif
+                <div style="text-align: center;"><h2>Поки що немає партнерів</h2></div>
+                <div style="height:35vh; width: auto;"></div>
 
-            </div>
+            @endif
+
         </div>
     </div>
 
