@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('meta')
-    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Наші контакти. Грицак, Терно, Бубенщиков: + 38 (095) 02-39-901', 'key' => 'контакты, почта, телефон, карта, контакти, пошта', 'desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38(095) 02-39-901, м.Херсон, вул. Робоча, 64-а, https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38(095) 02-39-901, м.Херсон, вул. Робоча, 64-а, https://lawyersoffice.com.ua'])
+    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Наші контакти. Грицак, Терно, Бубенщиков: + 38 (066) 011-18-10', 'key' => 'контакты, почта, телефон, карта, контакти, пошта', 'desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38 (066) 011-18-10, м.Херсон, вул. Грецька (Леніна), 37, https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Інформація про наші контакти. + 38 (066) 011-18-10, м.Херсон, вул. Грецька (Леніна), 37, https://lawyersoffice.com.ua'])
 @endsection
 
 @section('title', $title)
@@ -28,13 +28,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text">
-                        <p> Ми працюємо для вас цілодобово, що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                        <p>{{--Ми працюємо для вас цілодобово, що використовується в друкарстві та дизайні. Lorem Ipsum є,
                             фактично,
                             стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав
                             на ній
                             підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в
                             електронному
-                            верстуванні, залишаючись по суті незмінною. </p>
+                            верстуванні, залишаючись по суті незмінною.--}}</p>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="phone_contacts">
                         <img src="images/theme/svg/ic_phone.svg" alt="icon" class="icon_phone" width="24px"
                              height="auto">
-                        <span>+ 38 (095) 02-39-901</span>
+                        <span>+ 38 (066) 011-18-10</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -57,7 +57,7 @@
                     <div class="address_contacts">
                         <img src="images/theme/svg/ic_place.svg" alt="icon" class="icon_place" width="24px"
                              height="auto">
-                        <span>м.Херсон, вул. Робоча, 64-а</span>
+                        <span>м.Херсон, вул. Грецька (Леніна), 37</span>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
     </script>
     <script>
         function initMap() {
-            var uluru = {lat: 46.6424117, lng: 32.5975535};
+            var uluru = {lat: 46.62959394, lng: 32.60375297};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
                 center: uluru

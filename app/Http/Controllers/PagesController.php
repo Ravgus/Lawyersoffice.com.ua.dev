@@ -15,31 +15,31 @@ class PagesController extends Controller
 
     public function main()
     {
-        $workers = Worker::all();
+        $workers = Worker::all('name', 'text', 'sphere', 'img', 'email', 'phone');
         return view('landing.main', ['title' => 'Адвокатський Офіс - Грицак, Терно, Бубенщиков', 'workers' => $workers]);
     }
 
     public function offers()
     {
-        $offers = Offer::all();
+        $offers = Offer::all('name', 'text', 'img');
         return view('landing.offers', ['title' => 'Адвокатський Офіс - Послуги', 'offers' => $offers]);
     }
 
     public function dtps()
     {
-        $dtps = Dtp::all();
+        $dtps = Dtp::all('name', 'text', 'img');
         return view('landing.dtps', ['title' => 'Адвокатський Офіс - Допомога при ДТП', 'dtps' => $dtps]);
     }
 
     public function faqs()
     {
-        $faqs = Faq::all();
+        $faqs = Faq::all('question', 'answer');
         return view('landing.faqs', ['title' => 'Адвокатський Офіс - Питання\Відповіді', 'faqs' => $faqs]);
     }
 
     public function partners()
     {
-        $partners = Partner::all();
+        $partners = Partner::all('name', 'text', 'img', 'link');
         return view('landing.partners', ['title' => 'Адвокатський Офіс - Ми співпрацюємо', 'partners' => $partners]);
     }
 

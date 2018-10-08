@@ -17,7 +17,7 @@
 <meta itemprop="name" content="Адвокатський Офіс – Грицак, Терно, Бубенщиков">
 <meta itemprop="description" content="{{ $desc }}">
 <meta itemprop="image" content="https://lawyersoffice.com.ua/images/theme/favicon/fav.ico">
-<meta name="keywords" itemprop="keywords"
+<meta name="keywords"
       content="юридичні послуги херсон, послуги адвоката Херсон, херсон адвокат, юридические услуги херсон, услуги адвоката Херсон, адвокат Херсон, грицак, терно, бубенщиков, {{ $key }}">
 
 <meta name="description" content="{{ $full_desc }}">

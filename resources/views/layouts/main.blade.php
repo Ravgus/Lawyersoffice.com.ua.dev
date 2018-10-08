@@ -34,7 +34,7 @@
     <link rel="stylesheet" href={{ asset("css/main.css") }}>
     <link rel="stylesheet" href={{ asset("css/media.css") }}>
 
-    <script src={{ asset("libs/modernizr/modernizr.js") }}></script>
+    {{--<script async defer src={{ asset("libs/modernizr/modernizr.js") }}></script>--}}
 
 </head>
 
@@ -47,12 +47,12 @@
                     <div class="address">
                         <img src={{ asset("images/theme/svg/ic_place.svg") }} alt="icon" class="icon_place" width="24px"
                              height="auto">
-                        м.Херсон, вул. Робоча, 64-а
+                        м.Херсон, вул. Грецька (Леніна), 37
                     </div>
                     <div class="phone">
                         <img src={{ asset("images/theme/svg/ic_phone.svg") }} alt="icon" class="icon_phone" width="24px"
                              height="auto">
-                        + 38 (095) 02-39-901
+                        + 38 (066) 011-18-10
                     </div>
                 </div>
             </div>
@@ -90,27 +90,15 @@
 
 <div class="hidden"></div>
 
-<div class="loader">
+{{--<div class="loader">
     <div class="loader_inner"></div>
-</div>
+</div>--}}
 
 <!--[if lt IE 9]>
-<script src={{ asset("libs/html5shiv/es5-shim.min.js") }}></script>
-<
-script
-src = {
-{
-    asset("libs/html5shiv/html5shiv.min.js")
-}
-}></script>
-<script src={{ asset("libs/html5shiv/html5shiv-printshiv.min.js") }}></script>
-<
-script
-src = {
-{
-    asset("libs/respond/respond.min.js")
-}
-}></script>
+<script src="{{ asset('libs/html5shiv/es5-shim.min.js') }}"></script>
+<script src="{{ asset('libs/html5shiv/html5shiv.min.js') }}"></script>
+<script src="{{ asset('libs/html5shiv/html5shiv-printshiv.min.js') }}"></script>
+<script src="{{ asset('libs/respond/respond.min.js') }}"></script>
 <![endif]-->
 
 <script src={{ asset("libs/jquery/jquery-1.11.2.min.js") }}></script>
@@ -135,8 +123,7 @@ src = {
     gtag('config', 'UA-119545422-1');
 </script>
 
-
-<!-- Yandex.Metrika counter -->
+{{--<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
@@ -160,7 +147,8 @@ src = {
             };
         s.type = "text/javascript";
         s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        /*s.src = "https://mc.yandex.ru/metrika/tag.js";*/
+        s.src = "https://d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js";
 
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
@@ -172,7 +160,7 @@ src = {
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/48930662" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
-<!-- /Yandex.Metrika counter -->
+<!-- /Yandex.Metrika counter -->--}}
 
 <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>

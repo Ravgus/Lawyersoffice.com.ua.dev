@@ -11,10 +11,6 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-})->name('main');*/
-
 Route::get('/', ['uses' => 'PagesController@main', 'as' => 'main']);
 Route::get('/offers', ['uses' => 'PagesController@offers', 'as' => 'offers']);
 Route::get('/dtps', ['uses' => 'PagesController@dtps', 'as' => 'dtps']);
@@ -27,8 +23,8 @@ Route::get('/news/{alias}', ['uses' => 'PagesController@article', 'as' => 'artic
 Auth::routes();
 
 Route::match(['post', 'get'], 'register', function (){
-    Auth::logout();
-    return redirect('/');
+    /*Auth::logout();
+    return redirect('/');*/
+    abort(404);
 })->name('register');
 
-/*Route::get('/home', 'HomeController@index')->name('home');*/

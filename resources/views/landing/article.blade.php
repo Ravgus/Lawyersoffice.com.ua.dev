@@ -3,13 +3,13 @@
 @section('meta')
     <meta itemprop="name" content="Адвокатський Офіс – {{ $article->name }}">
     <meta itemprop="description"
-          content="Адвокатський Офіс: + 38 (095) 02-39-901. {{ mb_substr($article->description, 0, 150) }}">
+          content="Адвокатський Офіс: + 38 (066) 011-18-10. {{ mb_substr($article->description, 0, 150) }}">
     <meta itemprop="image" content="https://lawyersoffice.com.ua/images/theme/favicon/fav.ico">
     <meta name="keywords" itemprop="keywords"
           content="{{ $article->name }}, юридичні послуги херсон, послуги адвоката Херсон, херсон адвокат, юридические услуги херсон, услуги адвоката Херсон, адвокат Херсон, грицак, терно, бубенщиков">
 
     <meta name="description"
-          content="Адвокатський Офіс: + 38 (095) 02-39-901. {{ mb_substr($article->description, 0, 150) }}">
+          content="Адвокатський Офіс: + 38 (066) 011-18-10. {{ mb_substr($article->description, 0, 150) }}">
     <meta name="author" content="Bang-studio.com">
     <meta name="keywords"
           content="{{ $article->name }}, юридичні послуги херсон, послуги адвоката Херсон, херсон адвокат, юридические услуги херсон, услуги адвоката Херсон, адвокат Херсон, грицак, терно, бубенщиков">

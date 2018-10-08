@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // Передача полей навигации в каждый шаблон
-        View::share('navigation', Navigation::all());
+        View::share('navigation', Navigation::all('name', 'alias'));
     }
 
     /**

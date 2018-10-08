@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('meta')
-    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Новини', 'key' => 'новости, статьи, новини, статті', 'desc' => 'Адвокатський Офіс – Наші новини. + 38(095) 02-39-901, https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Наші новини. + 38(095) 02-39-901, https://lawyersoffice.com.ua'])
+    @include('landing.import.meta', ['title' => 'Адвокатський Офіс. Новини', 'key' => 'новости, статьи, новини, статті', 'desc' => 'Адвокатський Офіс – Наші новини. + 38 (066) 011-18-10, https://lawyersoffice.com.ua', 'full_desc' => 'Адвокатський Офіс – Наші новини. + 38 (066) 011-18-10, https://lawyersoffice.com.ua'])
 @endsection
 
 @section('title', $title)
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            @if(!isset($articles))
+            @if(!$articles->isEmpty())
 
                 @foreach($articles as $article)
 
